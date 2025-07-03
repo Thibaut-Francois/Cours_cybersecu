@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Article 8</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/styles/style.css">
+  <link rel="icon" type="image/x-icon" href="/images/piou.ico">
+</head>
+
+<body>
+  <header>
+    <a href="/index.html"><h1>Cours de Cyber</h1></a>
+    <nav>
+      <a href="/index.html">Accueil</a>
+      <a href="#">À propos</a>
+      <a href="#">Contact</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="content">
+      <div>
+      <h2>La cyberattaque Target</h2>
+      <div class="article-meta">Publié le 02 juilet 2025</div>
+        <section>
+
+
+          <section>
+  <h3>🔓 Quelle est la vulnérabilité exploitée ?</h3>
+  <p>L’attaque contre Target en 2013 n’a pas exploité une faille technique dans un logiciel, mais plutôt une faiblesse dans la chaîne de confiance et dans la sécurité des partenaires tiers. Les cybercriminels ont d’abord compromis les identifiants d’accès d’un sous-traitant de Target, une entreprise de chauffage, ventilation et climatisation (HVAC), pour accéder au réseau interne. Cette compromission a été rendue possible par une mauvaise segmentation du réseau et par une politique d’accès trop permissive accordée au prestataire.</p>
+</section>
+
+<section>
+  <h3>🧨 Comment l’attaque s’est-elle déroulée ?</h3>
+  <p>Les attaquants ont utilisé les identifiants de l’entreprise prestataire pour accéder au portail de gestion de Target. Une fois dans le réseau, ils ont progressivement escaladé leurs privilèges et atteint les systèmes de point de vente (POS). Ils y ont déployé un malware nommé <em>BlackPOS</em>, conçu pour siphonner les données des cartes bancaires au moment où elles sont lues par les terminaux. Les informations volées ont ensuite été exfiltrées via des serveurs internes compromis, puis transférées vers des serveurs externes contrôlés par les attaquants.</p>
+</section>
+
+<section>
+  <h3>🎯 Qui a été touché ?</h3>
+  <p>L’attaque a touché plus de 110 millions de clients. Elle a compromis les données de 40 millions de cartes de crédit et de débit, ainsi que les informations personnelles (nom, adresse, téléphone, e-mail) de 70 millions de personnes. Les consommateurs américains ont été les plus affectés, mais la réputation de Target a aussi été fortement endommagée à l’échelle internationale.</p>
+</section>
+
+<section>
+  <h3>💥 Quels ont été les impacts ?</h3>
+  <p>Les conséquences ont été majeures sur les plans financier, juridique et réputationnel. Target a dû faire face à des dizaines de plaintes, rembourser les clients, payer des amendes réglementaires et engager des dépenses massives en cybersécurité. Le PDG et le directeur de l’information (CIO) ont quitté l’entreprise à la suite du scandale. La confiance des consommateurs envers la marque a été durablement affectée, et la fuite de données a alimenté un vaste marché noir de cartes bancaires.</p>
+</section>
+
+<section>
+  <h3>💰 Coût estimé selon la taille de l’entreprise</h3>
+  <table>
+    <thead>
+      <tr>
+        <th>Taille d’entreprise</th>
+        <th>Coût estimé moyen</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Petite entreprise (&lt;50 salariés)</td>
+        <td>Entre 100 000 € et 250 000 € (rien que pour les audits et mises à jour sécurité)</td>
+      </tr>
+      <tr>
+        <td>Moyenne entreprise (50 à 250 salariés)</td>
+        <td>Entre 500 000 € et 2 millions € (frais légaux, indemnisations, perte d’activité)</td>
+      </tr>
+      <tr>
+        <td>Grande entreprise (&gt;250 salariés)</td>
+        <td>Plus de 200 millions € (Target a estimé ses pertes totales à environ 300 millions $)</td>
+      </tr>
+    </tbody>
+  </table>
+</section>
+
+<section>
+  <h3>🛡️ Comment s’en protéger ?</h3>
+  <p>Pour éviter ce type d’incident, il est essentiel de renforcer la sécurité liée aux prestataires tiers. Il faut appliquer des politiques strictes de gestion des accès, segmenter le réseau pour cloisonner les systèmes critiques, et surveiller les connexions inhabituelles depuis l’extérieur. Il est également crucial de déployer des systèmes de détection d’intrusion sur les réseaux internes, et de sensibiliser les partenaires externes aux bonnes pratiques de cybersécurité. Le monitoring en temps réel des terminaux de paiement peut aussi aider à détecter des comportements anormaux.</p>
+</section>
+
+<section>
+  <h3>🤔 Pourquoi est-ce difficile à éviter ?</h3>
+  <p>La difficulté réside dans la complexité croissante des écosystèmes d’entreprise, où de nombreux partenaires techniques accèdent à des systèmes internes. Ces accès sont souvent accordés sans contrôle fin ou sans expiration automatique. De plus, les attaques reposant sur une escalade de privilèges passent parfois inaperçues si la détection ne couvre que les points d’entrée externes. Enfin, les malwares ciblant les terminaux de paiement sont conçus pour être furtifs et difficiles à identifier avant qu’ils n’aient déjà exfiltré les données.</p>
+</section>
+
+<section>
+  <h3>🏢 Dans le contexte de notre entreprise, que ferions-nous ?</h3>
+  <p>Nous commencerions par établir une cartographie précise des accès accordés à nos partenaires externes, et nous limiterions ceux-ci selon le principe du moindre privilège. Nous mettrions en place des systèmes de journalisation et d’analyse comportementale pour surveiller les mouvements inhabituels dans le réseau. La segmentation des environnements sensibles serait renforcée, tout comme la protection des points de vente et terminaux de paiement. Enfin, une politique stricte de vérification des prestataires serait instaurée, incluant des audits de sécurité réguliers et des engagements contractuels clairs en matière de cybersécurité.</p>
+</section>
+
+
+
+
+
+        </section>
+      </div>
+    </section>
+    
+
+    <aside class="sidebar">
+      <h3>À propos</h3>
+      <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit.<br>-Thibaut François 2025</p>
+      <h3>Catégories</h3>
+      <ul>
+        <li><a href="#">Web</a></li>
+        <li><a target="_blank" href="https://www.youtube.com/watch?v=dQw4w9WgXcQ&ab_channel=RickAstley">Vérité Absolue</a></li>
+        <li><a target="_blank" href="https://www.securite-routiere.gouv.fr/passer-son-permis-de-conduire/preparation-de-lexamen-du-code-de-la-route">Code</a></li>
+      </ul>
+    </aside>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Cours de Cybersécurité. Tous droits réservés.</p>
+  </footer>
+</body>
+</html>

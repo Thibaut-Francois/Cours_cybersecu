@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Article 4</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/styles/style.css">
+  <link rel="icon" type="image/x-icon" href="/images/piou.ico">
+</head>
+
+<body>
+  <header>
+    <a href="/index.html"><h1>Cours de Cyber</h1></a>
+    <nav>
+      <a href="/index.html">Accueil</a>
+      <a href="#">À propos</a>
+      <a href="#">Contact</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="content">
+    <div>
+      <h2>La cyberattaque WannaCry</h2>
+      <div class="article-meta">Publié le 02 juilet 2025</div>
+          <section>
+      <h3>🔓 Quelle est la vulnérabilité exploitée ?</h3>
+      <p>L’attaque WannaCry, survenue en mai 2017, a exploité une faille critique dans Windows appelée <strong>EternalBlue</strong> (CVE-2017-0144). Cette faille concernait le protocole <strong>SMBv1</strong> (Server Message Block), permettant l’exécution de code à distance. Elle avait été découverte par la NSA, puis rendue publique après avoir été dérobée par le groupe de hackers <em>Shadow Brokers</em>.</p>
+    </section>
+
+    <section>
+      <h3>🧨 Comment l’attaque s’est-elle déroulée ?</h3>
+      <p>Le ransomware WannaCry s’est propagé automatiquement en exploitant la faille EternalBlue. Une fois dans un système, il chiffrait tous les fichiers et affichait une demande de rançon allant de 300 à 600 dollars en Bitcoin, menaçant de supprimer les fichiers si la rançon n’était pas payée dans un délai donné. L’un des éléments les plus dangereux de WannaCry était sa capacité à se propager comme un ver, contaminant rapidement d’autres machines vulnérables au sein du même réseau.</p>
+    </section>
+
+    <section>
+      <h3>🎯 Qui a été touché ?</h3>
+      <p>L’attaque a touché plus de 230 000 ordinateurs dans environ 150 pays. Parmi les principales victimes, on retrouve le <strong>NHS</strong> (santé publique britannique), dont plusieurs hôpitaux ont été contraints d’annuler des opérations et de fermer temporairement. Le constructeur <strong>Renault-Nissan</strong> a dû interrompre sa production dans plusieurs usines. D’autres grandes organisations comme <strong>FedEx</strong>, <strong>Deutsche Bahn</strong> (chemins de fer allemands), <strong>Telefonica</strong> (Espagne) et même le <strong>Ministère de l’Intérieur russe</strong> ont également été touchées.</p>
+    </section>
+
+    <section>
+      <h3>💥 Quels ont été les impacts ?</h3>
+      <p>Les conséquences ont été graves : de nombreux services essentiels ont été interrompus, notamment dans le domaine de la santé et des transports. Les entreprises ont perdu l’accès à leurs fichiers et à leurs systèmes informatiques, ce qui a entraîné des pertes de revenus importantes. Enfin, l'image et la réputation de nombreuses organisations ont été durablement affectées par leur incapacité à se défendre contre cette attaque.</p>
+    </section>
+
+    <section>
+      <h3>💰 Coût estimé selon la taille de l’entreprise</h3>
+      <table>
+        <thead>
+          <tr>
+            <th>Taille d’entreprise</th>
+            <th>Coût estimé moyen</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Petite entreprise (&lt;50 salariés)</td>
+            <td>Entre 10 000 € et 100 000 €</td>
+          </tr>
+          <tr>
+            <td>Moyenne entreprise (50 à 250 salariés)</td>
+            <td>Entre 100 000 € et 1 million €</td>
+          </tr>
+          <tr>
+            <td>Grande entreprise (&gt;250 salariés)</td>
+            <td>Jusqu’à 100 millions € ou plus</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section>
+      <h3>🛡️ Comment s’en protéger ?</h3>
+      <p>Pour se prémunir contre ce type d’attaque, il est essentiel de maintenir à jour tous les systèmes informatiques avec les derniers correctifs de sécurité fournis par les éditeurs. Il est également recommandé de désactiver les protocoles obsolètes et vulnérables comme le SMBv1. La réalisation régulière de sauvegardes hors ligne garantit la possibilité de restaurer les données en cas de chiffrement. Il est aussi important d’utiliser un antivirus et un pare-feu régulièrement mis à jour, et d’accompagner cela d’une sensibilisation active des employés aux cybermenaces comme le phishing. Enfin, segmenter le réseau interne limite la propagation d’un malware en cas d’infection initiale.</p>
+    </section>
+
+    <section>
+      <h3>🤔 Pourquoi est-ce difficile à éviter ?</h3>
+      <p>Malgré les correctifs disponibles, de nombreuses entreprises tardent à appliquer les mises à jour de sécurité, souvent par manque de temps, de ressources ou de processus adaptés. Par ailleurs, certaines organisations utilisent encore des systèmes d’exploitation obsolètes comme Windows XP ou Windows 7, qui ne reçoivent plus de mises à jour de sécurité. L’attaque WannaCry exploitait une faille fraîchement rendue publique, ce qui a laissé peu de temps aux équipes informatiques pour réagir. De plus, les PME manquent souvent des moyens humains ou financiers pour gérer correctement leur cybersécurité.</p>
+    </section>
+
+    <section>
+      <h3>🏢 Dans le contexte de notre entreprise, que ferions-nous ?</h3>
+      <p>Dans notre entreprise, nous mettrions en place un audit de sécurité régulier afin d’identifier les vulnérabilités. Un plan de gestion des mises à jour serait instauré pour garantir que tous les systèmes restent à jour. Nous établirions un plan de reprise d’activité (PRA) avec des sauvegardes régulières, déconnectées du réseau. Une attention particulière serait portée à la formation continue des collaborateurs pour les sensibiliser aux bonnes pratiques numériques. La supervision du réseau serait assurée via des outils adaptés, et nous investirions dans des solutions de sécurité avancées, capables de détecter les comportements anormaux et de répondre rapidement aux incidents.</p>
+    </section>
+
+
+  </div>
+    </section>
+
+    <aside class="sidebar">
+      <h3>À propos</h3>
+      <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit.<br>-Thibaut François 2025</p>
+      <h3>Catégories</h3>
+      <ul>
+        <li><a href="#">Web</a></li>
+        <li><a target="_blank" href="https://www.youtube.com/watch?v=dQw4w9WgXcQ&ab_channel=RickAstley">Vérité Absolue</a></li>
+        <li><a target="_blank" href="https://www.securite-routiere.gouv.fr/passer-son-permis-de-conduire/preparation-de-lexamen-du-code-de-la-route">Code</a></li>
+      </ul>
+    </aside>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Cours de Cybersécurité. Tous droits réservés.</p>
+  </footer>
+</body>
+</html>

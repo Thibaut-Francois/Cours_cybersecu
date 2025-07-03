@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Article 6</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/styles/style.css">
+  <link rel="icon" type="image/x-icon" href="/images/piou.ico">
+</head>
+
+<body>
+  <header>
+    <a href="/index.html"><h1>Cours de Cyber</h1></a>
+    <nav>
+      <a href="/index.html">Accueil</a>
+      <a href="#">À propos</a>
+      <a href="#">Contact</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="content">
+      <div>
+      <h2>La cyberattaque SolarWinds</h2>
+      <div class="article-meta">Publié le 02 juilet 2025</div>
+        <section>
+
+
+          <section>
+  <h3>🔓 Quelle est la vulnérabilité exploitée ?</h3>
+  <p>L’attaque SolarWinds, révélée en décembre 2020, n’a pas exploité une vulnérabilité logicielle classique, mais plutôt une faiblesse dans la chaîne d’approvisionnement logicielle. Les attaquants ont réussi à compromettre le processus de développement de la plateforme Orion, un logiciel de supervision réseau édité par la société SolarWinds. En y insérant un code malveillant baptisé <em>Sunburst</em>, ils ont pu distribuer une version piégée du logiciel à environ 18 000 clients, sous la forme d’une mise à jour officielle signée numériquement.</p>
+</section>
+
+<section>
+  <h3>🧨 Comment l’attaque s’est-elle déroulée ?</h3>
+  <p>Les attaquants, soupçonnés d’être liés à un groupe APT étatique (probablement russe, connu sous le nom APT29 ou « Cozy Bear »), ont infiltré l’environnement de développement de SolarWinds plusieurs mois avant l’attaque. Ils ont injecté le malware Sunburst dans le code source du logiciel Orion, utilisé pour la surveillance IT. Après la distribution de la mise à jour compromise, le malware restait inactif plusieurs jours avant de contacter un serveur de commande et de contrôle, permettant aux attaquants de déployer d’autres outils pour espionner ou manipuler les systèmes internes des victimes, souvent en toute discrétion.</p>
+</section>
+
+<section>
+  <h3>🎯 Qui a été touché ?</h3>
+  <p>Environ 18 000 organisations ont installé la mise à jour compromise. Parmi les victimes les plus notables figurent des agences gouvernementales américaines (Département du Trésor, de la Justice, de l’Énergie, etc.), des entreprises technologiques majeures (Microsoft, Cisco, Intel), des sociétés de cybersécurité (FireEye), ainsi que plusieurs organisations internationales. La campagne a été si vaste que l’ampleur réelle des intrusions demeure difficile à quantifier précisément.</p>
+</section>
+
+<section>
+  <h3>💥 Quels ont été les impacts ?</h3>
+  <p>Les conséquences de l’attaque SolarWinds sont considérées comme l’un des plus grands actes d’espionnage numérique de la décennie. Les attaquants ont pu observer les communications internes, accéder à des données sensibles et compromettre des comptes à haut privilège, sans être détectés pendant plusieurs mois. L’incident a mis en lumière la fragilité de la chaîne d’approvisionnement logicielle et le manque de contrôle sur le code tiers intégré dans des systèmes critiques. La confiance envers les processus de mise à jour a également été profondément ébranlée.</p>
+</section>
+
+<section>
+  <h3>💰 Coût estimé selon la taille de l’entreprise</h3>
+  <table>
+    <thead>
+      <tr>
+        <th>Taille d’entreprise</th>
+        <th>Coût estimé moyen</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Petite entreprise (&lt;50 salariés)</td>
+        <td>Entre 50 000 € et 150 000 € (principalement en audit et remédiation)</td>
+      </tr>
+      <tr>
+        <td>Moyenne entreprise (50 à 250 salariés)</td>
+        <td>Entre 200 000 € et 1 million €</td>
+      </tr>
+      <tr>
+        <td>Grande entreprise (&gt;250 salariés)</td>
+        <td>Plusieurs millions d’euros, certains cas dépassant 50 millions €</td>
+      </tr>
+    </tbody>
+  </table>
+</section>
+
+<section>
+  <h3>🛡️ Comment s’en protéger ?</h3>
+  <p>La protection contre ce type d’attaque nécessite une vigilance renforcée sur toute la chaîne de développement logiciel. Il est essentiel d’auditer et sécuriser les environnements CI/CD, de contrôler les mises à jour tierces via une validation de signature et d’intégrité, et d’appliquer une politique de zéro confiance (Zero Trust). Les entreprises doivent surveiller les comportements anormaux sur le réseau, implémenter une segmentation rigoureuse et limiter les privilèges d’accès. L’adoption de technologies comme le XDR (Extended Detection and Response) peut aussi aider à repérer les comportements suspects post-exploitation.</p>
+</section>
+
+<section>
+  <h3>🤔 Pourquoi est-ce difficile à éviter ?</h3>
+  <p>Les attaques par la chaîne d’approvisionnement sont extrêmement difficiles à détecter car elles proviennent de logiciels de confiance, souvent mis à jour automatiquement. L’intégration de composants tiers dans les projets est devenue courante, mais peu d’organisations auditent réellement le code reçu ou les binaires signés. Les outils de sécurité classiques ne signalent pas de telles menaces car le logiciel infecté provient d’une source légitime. Enfin, les attaquants utilisent des techniques de furtivité avancées pour rester invisibles pendant de longs mois, rendant la détection particulièrement complexe.</p>
+</section>
+
+<section>
+  <h3>🏢 Dans le contexte de notre entreprise, que ferions-nous ?</h3>
+  <p>Face à un risque de type SolarWinds, notre entreprise renforcerait la supervision des processus de mise à jour automatique et établirait une liste blanche des fournisseurs approuvés. Nous auditerions régulièrement notre environnement de développement, tout en mettant en place une veille active sur les vulnérabilités logicielles et sur nos dépendances tierces. Nous privilégierions les outils offrant une traçabilité complète des modifications logicielles, et déploierions des systèmes de détection comportementale pour alerter en cas d’anomalie. Enfin, nous renforcerions les procédures de réponse aux incidents, en particulier pour les accès privilégiés et les mouvements latéraux.</p>
+</section>
+
+
+
+        </section>
+      </div>
+    </section>
+    
+
+    <aside class="sidebar">
+      <h3>À propos</h3>
+      <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit.<br>-Thibaut François 2025</p>
+      <h3>Catégories</h3>
+      <ul>
+        <li><a href="#">Web</a></li>
+        <li><a target="_blank" href="https://www.youtube.com/watch?v=dQw4w9WgXcQ&ab_channel=RickAstley">Vérité Absolue</a></li>
+        <li><a target="_blank" href="https://www.securite-routiere.gouv.fr/passer-son-permis-de-conduire/preparation-de-lexamen-du-code-de-la-route">Code</a></li>
+      </ul>
+    </aside>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Cours de Cybersécurité. Tous droits réservés.</p>
+  </footer>
+</body>
+</html>

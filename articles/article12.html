@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Article 11</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/styles/style.css">
+  <link rel="icon" type="image/x-icon" href="/images/piou.ico">
+</head>
+
+<body>
+  <header>
+    <a href="/index.html"><h1>Cours de Cyber</h1></a>
+    <nav>
+      <a href="/index.html">Accueil</a>
+      <a href="#">À propos</a>
+      <a href="#">Contact</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="content">
+      <div>
+      <h2>Enquête sur le groupe Lazarus Group</h2>
+      <div class="article-meta">Publié le 03 juilet 2025</div>
+        <section>
+
+
+          
+
+          <section>
+  <h3>🎭 Identification du groupe</h3>
+  <p><strong>Nom(s) :</strong> Lazarus Group, APT38, Hidden Cobra, Guardians of Peace</p>
+  <p><strong>Origine présumée :</strong> Corée du Nord</p>
+  <p><strong>Affiliations :</strong> Étroitement lié au Bureau Général de Reconnaissance (RGB), service de renseignement militaire nord-coréen</p>
+  <p><strong>Motivations :</strong> Cyberespionnage, financement du régime nord-coréen par le vol, sabotage, déstabilisation politique</p>
+</section>
+
+<section>
+  <h3>📅 Historique des opérations</h3>
+  <p>Lazarus est actif depuis le <strong>milieu des années 2000</strong> et s'est illustré par des attaques de grande ampleur, mêlant sabotage, vol massif et espionnage.</p>
+  <ul>
+    <li><strong>2009–2012 :</strong> Attaques DDoS massives contre des institutions sud-coréennes</li>
+    <li><strong>2014 :</strong> Attaque contre Sony Pictures (destruction de données, fuites massives, sabotage)</li>
+    <li><strong>2016 :</strong> Vol de 81 millions $ à la Banque Centrale du Bangladesh via le système SWIFT</li>
+    <li><strong>2017 :</strong> Propagation mondiale du ransomware WannaCry (considéré comme une opération financière)</li>
+    <li><strong>2019–2022 :</strong> Attaques contre des exchanges de cryptomonnaies, vols cumulés estimés à plusieurs milliards $</li>
+    <li><strong>2023 :</strong> Campagnes d’espionnage contre des entreprises de défense, cybersécurité, et chercheurs en IA</li>
+  </ul>
+  <img class="graph" src="/images/graph3.png" alt="graph3">
+</section>
+
+<section>
+  <h3>🧰 Arsenal technique</h3>
+  <p><strong>Malwares utilisés :</strong> WannaCry, Destover, Fallchill, Duuzer, Volgmer, AppleJeus, Manuscrypt, Loader.ps1, MATA</p>
+  <p><strong>Méthodes d’intrusion :</strong> 
+    <ul>
+      <li>Spear-phishing avec documents piégés (CV, contrats, offres d’emploi)</li>
+      <li>Exploitation de vulnérabilités (notamment Windows et Adobe Flash)</li>
+      <li>Chaînes d’infection complexes avec backdoors et outils de reconnaissance réseau</li>
+      <li>Utilisation de malwares développés sur mesure pour chaque cible ou secteur</li>
+    </ul>
+  </p>
+  <p><strong>Infrastructure :</strong> Réseaux d’hébergement redondants, serveurs C2 répartis mondialement, tunneling via proxies compromis et infrastructure cloud détournée</p>
+</section>
+
+<section>
+  <h3>🎯 Victimologie</h3>
+  <p><strong>Secteurs ciblés :</strong> Finance, défense, médias, énergie, santé, technologies, cryptomonnaies</p>
+  <p><strong>Géographie :</strong> Cibles mondiales, avec priorité sur la Corée du Sud, les États-Unis, le Japon, l’Europe, l’Asie du Sud-Est et l’Afrique</p>
+  <p><strong>Sélection des cibles :</strong> Selon les besoins stratégiques du régime nord-coréen : accès à devises étrangères, informations sensibles, influence ou sabotage</p>
+</section>
+
+<section>
+  <h3>🔍 Particularités techniques</h3>
+  <p>Lazarus se distingue par ses capacités <strong>multidomaines</strong> : espionnage, cybercriminalité et sabotage. Il combine des attaques très techniques avec une logistique rigoureuse et des scénarios de compromission sur mesure.</p>
+  <p>Le groupe a démontré une grande capacité à <strong>s’adapter et à rebondir</strong> même après des arrestations ou des démantèlements partiels. Il développe ses propres outils, utilise des langages variés (C++, PowerShell, Python) et cible autant les PC que les serveurs, les mobiles et les infrastructures cloud.</p>
+</section>
+
+<section>
+  <h3>🧾 Indicateurs de compromission (IOCs)</h3>
+  <ul>
+    <li><strong>Domaines :</strong> cloudmail-service[.]com, securehostcdn[.]com, mailaccess-control[.]org</li>
+    <li><strong>IPs :</strong> 45.67.230.222, 103.253.41.45, 185.243.115.230 (variable selon les campagnes)</li>
+    <li><strong>Hashes :</strong> 
+      <ul>
+        <li>WannaCry : <code>db349b97c37d22f5ea1d1841e3c89eb4</code></li>
+        <li>AppleJeus : <code>40bf4f3f576910c83fddfb907d6b0c2c</code></li>
+        <li>MATA : <code>a32dd9e1122f8e2eb22c9a1b2c13c443</code></li>
+      </ul>
+    </li>
+  </ul>
+</section>
+
+<section>
+  <h3>🛡️ Contre-mesures</h3>
+  <p>Pour se prémunir contre les attaques de Lazarus Group, une organisation doit adopter une sécurité multicouche robuste :</p>
+  <ul>
+    <li>Surveiller et mettre à jour les correctifs de sécurité critiques (notamment Windows, VPN, Adobe, et services web)</li>
+    <li>Renforcer la sécurité des chaînes de paiement et des accès à distance (notamment dans les secteurs financiers)</li>
+    <li>Mettre en place des politiques de contrôle des applications et de segmentation réseau</li>
+    <li>Déployer des outils de détection comportementale (EDR, NDR, SIEM) capables d’identifier les activités suspectes</li>
+    <li>Sensibiliser les utilisateurs aux attaques par phishing et à la reconnaissance de faux documents</li>
+    <li>Limiter les connexions sortantes vers des domaines non approuvés et surveiller les anomalies de trafic</li>
+    <li>Effectuer des audits réguliers sur les systèmes exposés au public (serveurs web, VPN, accès cloud)</li>
+  </ul>
+</section>
+
+
+
+
+
+        </section>
+      </div>
+    </section>
+    
+
+    <aside class="sidebar">
+      <h3>À propos</h3>
+      <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit.<br>-Thibaut François 2025</p>
+      <h3>Catégories</h3>
+      <ul>
+        <li><a href="#">Web</a></li>
+        <li><a target="_blank" href="https://www.youtube.com/watch?v=dQw4w9WgXcQ&ab_channel=RickAstley">Vérité Absolue</a></li>
+        <li><a target="_blank" href="https://www.securite-routiere.gouv.fr/passer-son-permis-de-conduire/preparation-de-lexamen-du-code-de-la-route">Code</a></li>
+      </ul>
+    </aside>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Cours de Cybersécurité. Tous droits réservés.</p>
+  </footer>
+</body>
+</html>
