@@ -33,8 +33,13 @@ body {
       gap: 2rem;
     }
     img{
-      width: max-content;
+      width: auto;
+      height: 50vh;
+      box-shadow: #333 0 0 10px;
+    }
+    .spe{
       height: auto;
+      width: max-content;
     }
     .graph{
       width: auto;
