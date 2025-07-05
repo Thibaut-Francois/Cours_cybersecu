@@ -25,15 +25,22 @@
     <main>
       <section class="content">
         <div>
-          <h2>Articles Root Me : Javascript - Obfuscation 1</h2>
+          <h2>Articles Root Me : XSS - Stockée 1</h2>
           <div class="article-meta">Publié le 01 juilet 2025</div>
 
-          <p>Une fois de plus, nous arrivons sur une page qui nous demande un mot de passe. Nous commencer à connaitre la musique : on ouvre le code source.</p>
-          <img src="../images/img5_1.png" alt="img5_1">
-          <p>Un coup d'oeil rapide au script pour permet de remarquer que la variable "pass" contient une chaine de caractère qui est de toute evidence hashé (encrypter).</p>
-          <img src="../images/img5_2.png" alt="img5_2">
-          <p>En continuant de lire le script on s'appercois que la variable "pass" subit la fonction unescape, il nous suffit donc d'aller décoder "pass" avec un décodeur unescape en ligne. On s'amuse bien !</p>
-          <img src="../images/img5_3.png" alt="img5_3">
+          <p>Ce défi ci est vraiment plus complexe car il nous demande de trouver le flag (mot de passe) dans un projet webpack sans beaucoup plus s'explication. Mais voici comment faire : ouvrons le code source et clickons sur le lien "app.".</p>
+          <img src="../images/img8_1.png" alt="img8_1">
+          <p>Dans ce fichier js nous trouvons le lien vers le mapping url du site.</p>
+          <img src="../images/img8_2.png" alt="img8_2">
+          <p>une fois cet url entrer dans la barre de recherche nous pouvons télécharger le ".map"</p>
+          <img src="../images/img8_3.png" alt="img8_3">
+          <p>Il ne nous reste plus qu'as ouvrir le .map avec un éditeur de code et faire un ctrl+F pour rechercher le mot "flag". Un défi interessant !</p>
+          <img src="../images/img8_4.png" alt="img8_4">
+                    <p>une fois cet url entrer dans la barre de recherche nous pouvons télécharger le ".map"</p>
+          <img src="../images/img8_3.png" alt="img8_3">
+          <p>Il ne nous reste plus qu'as ouvrir le .map avec un éditeur de code et faire un ctrl+F pour rechercher le mot "flag". Un défi interessant !</p>
+          <img src="../images/img8_4.png" alt="img8_4">
+          
           
         </div>
       </section>
