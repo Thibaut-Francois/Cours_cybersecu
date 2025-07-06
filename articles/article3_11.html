@@ -25,21 +25,13 @@
     <main>
       <section class="content">
         <div>
-          <h2>Articles Root Me : XSS - Stockée 1</h2>
+          <h2>Articles Root Me : AST - Deobfuscation</h2>
           <div class="article-meta">Publié le 01 juilet 2025</div>
 
-          <p>Ce défi souvre avec un fiorum sur lequel on peut evoyer un message. </p>
-          <img src="../images/img9_1.png" alt="img9_1">
-          <p>Le titre du défi nous mettant sur la voie on peut essayer d'injecter du Javascript dans le site via le formulaire du message. Pour tester cette théorie il nous sufuit d'encadrer une fonction simple comme "console.log" d'une balise "script". Et comme on peut le voir ci-dessous, cela fonctionne.</p>
-          <img src="../images/img9_2.png" alt="img9_2">
-          <p>Il nous faut ensuite aller sur webhook pour obtenir un url de tracage.</p>
-          <img src="../images/img9_3.png" alt="img9_3">
-          <p>On place nous url-hammeçon grâce à la fonction window.location dans le formulaire du message.</p>
-          <img src="../images/img9_4.png" alt="img9_4">
-          <p>Cette injection à pour effet de renvoyer la prochaine personne à cliquer sur une page webhook qui nous donneras ses cookies.</p>
-          <img class="imgspe" src="../images/img9_5.png" alt="img9_5">
-          <p>Et comme prévu il as juste fallut attendre qu'un admin passe par là pour obtenir de quoi se faire passer pour lui. Diabolique !</p>
-          <img src="../images/img9_6.png" alt="img9_6">
+          <p>Ce défi est tres complexe et objectivement au-dela de mes conaissances actuelles. Je me suis donc aidé de l'IA et voici un résume : Je suis passé d’une structure abstraite et fragmentée (AST JSON) à un code JS lisible en interprétant chaque nœud, traduisant les opérations, reconstituant les blocs et reliant les éléments pour retrouver la logique originale.</p>
+          <img src="../images/img11_1.png" alt="img11_1">
+          <p>On obtien en sorti un script js qui, une fois lancé, nous donne le flag dans la console. Enfin !</p>
+          <img src="../images/img11_2.png" alt="img11_2">
           
           
         </div>

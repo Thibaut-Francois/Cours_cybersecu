@@ -41,6 +41,10 @@ body {
       height: auto;
       width: max-content;
     }
+    .imgspe{
+      width: 80%;
+      height: auto;
+    }
     .graph{
       width: auto;
       height: 55vh;
